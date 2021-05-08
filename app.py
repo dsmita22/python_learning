@@ -97,3 +97,102 @@ while guess_count<guess_limit  :
         break
 else:
     print("sorry you fail to guess")
+
+# car game
+# If type
+# help or HELP :
+#    start - to Start the car
+#    stop -to stop the car
+#    quit - to exit
+# if type any other text it should show
+#     I don't understand
+
+userInput = ""
+started = False
+while True:
+    userInput = input(">").lower()
+    if userInput == 'start':
+        if started:
+            print('Car already started')
+        else:
+            started=True
+            print('Car started')
+    elif userInput == 'stop':
+        if not started:
+            print('Car is already stopped')
+        else:
+            started=False
+            print('Car stopped')
+    elif userInput == 'help':
+        print("""
+start - to Start the car
+stop -to stop the car
+quit - to exit
+        """)
+    elif userInput == 'quit':
+        break
+    else:
+        print("Sorry I don't understand that")
+
+# For loop
+# Print (0,0)(0,1)(0,2)(1,0)(1,1)....(3,0)..(3,2)
+
+for x in range(4):
+    for y in range(3):
+        print(f"({x},{y})")
+
+# Print
+# XXXXX
+# XX
+# XXXXX
+# XX
+# XX
+
+numbers = [5, 2, 5, 2, 2]
+for X_count in numbers:
+    print('X' * X_count)
+
+# Write a program to find largest number in the list
+list = [10, 30, 10, 30, 20]
+max = list[0]
+for number in list:
+    if number > max:
+        max = number
+print(max)
+
+# print all matrix value
+matrix =[
+ [1,2,3],
+ [4,5,6],
+ [7,8,9]
+]
+for row in matrix:
+     for item in row:
+         print(item)
+
+# remove duplicate number from list
+List = [2, 2, 4, 5, 6, 7, 7, 9, 8]
+unique=[]
+for number in List:
+    if number not in unique:
+        unique.append(number)
+print(unique)
+
+# Exception
+try:
+    age = int(input("Age :"))
+    print(age)
+except:
+    print('Invalid value')
+
+# Class
+class Point:
+    def move(self):
+        print("move")
+    def draw(self):
+        print("draw")
+point1 = Point()
+point1.x = 10
+point1.y = 20
+print(point1.x)
+point1.draw()
