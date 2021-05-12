@@ -196,3 +196,13 @@ point1.x = 10
 point1.y = 20
 print(point1.x)
 point1.draw()
+
+# contructor
+class Person:
+    def __init__(self, firstName, lastName):
+        self.firstName = firstName
+        self.lastName = lastName
+    def talk (self):
+        print(f"Hi ! I am {self.firstName} {self.lastName}")
+smita = Person("smita", "Dutta")
+smita.talk()
